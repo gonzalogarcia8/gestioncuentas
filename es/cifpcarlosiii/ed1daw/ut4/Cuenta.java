@@ -1,5 +1,10 @@
 package gestioncuentas.es.cifpcarlosiii.ed1daw.ut4;
 
+/**
+ * Clase para hacr calculos
+ * @author Gonzalo Garcia
+ * @version 1.0
+ */
 public class Cuenta {
 
     public Cuenta(String titular) {
@@ -13,11 +18,19 @@ public class Cuenta {
         setSaldo(0);
     }
 
+    /**
+     * Para mostrar datos
+     */
     public void mostrarDatos() {
         System.out.println("Titular: " + getTitular());
         System.out.println("Saldo: " + getSaldo());
     }
 
+    /**
+     * Metodo para tener control del dinero que sacas
+     * @param cantidad (double) cantidad de dinero
+     * @return (boolean) si puede retirar dinero o no
+     */
     public boolean retirarConControl(double cantidad) {
         if (cantidad <= getSaldo()) {
             setSaldo(getSaldo() - cantidad);
